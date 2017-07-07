@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html>
-<title>Page Visit Counter</title>
-<link rel="stylesheet" type="text/css" href="pvcstyle.css">
 
-<body>
+<head>
+  <title>Page Visit Counter</title>
+  <link rel="stylesheet" type="text/css" href="pvcstyle.css">
 
+  <!--execute on page load-->
+  <script type="text/javascript">
+    function getCount() {
+
+      return 100;
+    }
+
+    function updateCount() { var c = getCount();
+      //alert("count is "+c);
+      var suffix;
+      if (c === 1) {
+        suffix = 'st';
+      } else {
+        suffix = "th";
+      }
+      document.getElementsByClassName("countWrapper")[0].innerHTML = c + suffix;
+    }
+  </script>
+
+  <!--calc viewport dimensions -->
+  <script type="text/javascript">
+    // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); // var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0); // alert("height is " + h + " width is " + w);
+  </script>
+
+
+</head>
+
+<body onload="updateCount()">
+
+  <!--this div should be at the center of the page-->
   <div class="counterWrapper">
     <div class="messageWrapper">
-      <span>  <p id="message">You are the &nbsp;<div class="countWrapper">nth</div> visitor</p></span>
+      <span>  <p id="message">You are the &nbsp;<div class="countWrapper"></div> visitor</p></span>
     </div>
-    <script type="text/javascript">
-      var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-      var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-      alert("height is " + h + " width is " + w);
-    </script>
+
+
+
+
+
   </div>
 
 </body>
