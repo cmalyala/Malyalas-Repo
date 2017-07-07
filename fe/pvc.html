@@ -1,8 +1,21 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>
-Page visit counter
-</title>
-</head>
+<title>Page Visit Counter</title>
+<link rel="stylesheet" type="text/css" href="pvcstyle.css">
+
+<body>
+
+  <div class="counterWrapper">
+    <div class="messageWrapper">
+      <span>  <p id="message">You are the &nbsp;<div class="countWrapper">nth</div> visitor</p></span>
+    </div>
+    <script type="text/javascript">
+      var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+      var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      alert("height is " + h + " width is " + w);
+    </script>
+  </div>
+
+</body>
 
 </html>
