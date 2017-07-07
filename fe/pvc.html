@@ -5,14 +5,16 @@
   <title>Page Visit Counter</title>
   <link rel="stylesheet" type="text/css" href="pvcstyle.css">
 
-  <!--execute on page load-->
   <script type="text/javascript">
+    //call cheru's web service and get the counter value
     function getCount() {
+      var counter = 0;
 
-      return 100;
+      return ++counter;
     }
 
-    function updateCount() { var c = getCount();
+    function updateCount() {
+      var c = getCount();
       //alert("count is "+c);
       var suffix;
       if (c === 1) {
@@ -22,15 +24,19 @@
       }
       document.getElementsByClassName("countWrapper")[0].innerHTML = c + suffix;
     }
-  </script>
 
-  <!--calc viewport dimensions -->
-  <script type="text/javascript">
-    // var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); // var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0); // alert("height is " + h + " width is " + w);
+
+    //calc viewport dimensions
+
+    /*  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+             alert("height is " + h + " width is " + w);*/
   </script>
 
 
 </head>
+
+<!--execute on page load-->
 
 <body onload="updateCount()">
 
@@ -39,10 +45,6 @@
     <div class="messageWrapper">
       <span>  <p id="message">You are the &nbsp;<div class="countWrapper"></div> visitor</p></span>
     </div>
-
-
-
-
 
   </div>
 
