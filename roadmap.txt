@@ -1,0 +1,16 @@
+front end fe
+
+1. page pvc.html
+page visit counter
+when opened in web browser makes a get call to get an incremented number every time and displays on the web page with message
+"hi, this page is visited n times"
+2. css for above page to give beauty
+3. javascript files if needed
+
+backend be
+
+1. web service with 2 calls
+GET
+returns an incremented number of previously returned value every time 
+POST
+resets the counter to zero
