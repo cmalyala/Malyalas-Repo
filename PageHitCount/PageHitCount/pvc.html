@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Visit Counter</title>
+  <link rel="stylesheet" type="text/css" href="pvcstyle.css">
+
+  <script type="text/javascript">
+    //call cheru's web service and get the counter value
+    function getCount() {
+      var counter = 0;
+
+      return ++counter;
+    }
+
+    function updateCount() {
+      var c = getCount();
+      //alert("count is "+c);
+      var suffix;
+      if (c === 1) {
+        suffix = 'st';
+      } else {
+        suffix = "th";
+      }
+      document.getElementsByClassName("countWrapper")[0].innerHTML = c + suffix;
+    }
+
+
+    //calc viewport dimensions
+
+    /*  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+             alert("height is " + h + " width is " + w);*/
+  </script>
+
+
+</head>
+
+<!--execute on page load-->
+
+<body onload="updateCount()">
+
+  <!--this div should be at the center of the page-->
+  <div class="counterWrapper">
+    <div class="messageWrapper">
+      <span>  <p id="message">You are the &nbsp;<div class="countWrapper"></div> visitor</p></span>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
