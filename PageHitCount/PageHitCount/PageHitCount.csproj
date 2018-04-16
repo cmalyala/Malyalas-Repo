@@ -122,7 +122,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61349</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61349/</IISUrl>
+          <IISUrl>http://localhost:61349/pvc.html</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:61349/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
