@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/PageHitCount/.vs
+/PageHitCount/PageHitCount/bin
+/PageHitCount/PageHitCount/obj/Debug
